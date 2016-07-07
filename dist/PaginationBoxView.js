@@ -138,7 +138,7 @@ var PaginationBoxView = function (_Component) {
           var breakLabelValue = items[breakLabelKey];
 
           if (_this.props.breakLabel && breakLabelValue !== breakView) {
-            breakView = _react2.default.createElement(_BreakView2.default, { breakLabel: _this.props.breakLabel });
+            breakView = _react2.default.createElement(_BreakView2.default, { breakLabel: _this.props.breakLabel, breakClassName: _this.props.breakClassName });
 
             items['key' + _index] = breakView;
           }
@@ -214,6 +214,7 @@ PaginationBoxView.propTypes = {
   previousLabel: _react.PropTypes.node,
   nextLabel: _react.PropTypes.node,
   breakLabel: _react.PropTypes.node,
+  breakClassName: _react.PropTypes.string,
   clickCallback: _react.PropTypes.func,
   initialSelected: _react.PropTypes.number,
   forceSelected: _react.PropTypes.number,
@@ -237,6 +238,7 @@ PaginationBoxView.defaultProps = {
   previousLabel: "Previous",
   nextLabel: "Next",
   breakLabel: "...",
+  breakClassName: "break",
   disabledClassName: "disabled"
 };
 exports.default = PaginationBoxView;

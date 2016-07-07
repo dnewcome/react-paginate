@@ -31,10 +31,11 @@ var BreakView = function (_React$Component) {
     key: 'render',
     value: function render() {
       var label = this.props.breakLabel;
+      var cssClassName = this.props.breakClassName;
 
       return _react2.default.createElement(
         'li',
-        { className: 'break' },
+        { className: cssClassName },
         label
       );
     }

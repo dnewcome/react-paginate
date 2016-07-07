@@ -16,6 +16,7 @@ export default class PaginationBoxView extends Component {
     previousLabel         : PropTypes.node,
     nextLabel             : PropTypes.node,
     breakLabel            : PropTypes.node,
+    breakClassName        : PropTypes.string,
     clickCallback         : PropTypes.func,
     initialSelected       : PropTypes.number,
     forceSelected         : PropTypes.number,
@@ -40,6 +41,7 @@ export default class PaginationBoxView extends Component {
     previousLabel        : "Previous",
     nextLabel            : "Next",
     breakLabel           : "...",
+    breakClassName       : "break",
     disabledClassName    : "disabled"
   };
 
@@ -166,7 +168,7 @@ export default class PaginationBoxView extends Component {
 
         if (this.props.breakLabel && breakLabelValue !== breakView) {
           breakView = (
-            <BreakView breakLabel={this.props.breakLabel} />
+            <BreakView breakLabel={this.props.breakLabel} breakClassName={this.props.breakClassName}/>
           );
 
           items['key' + index] = breakView;
